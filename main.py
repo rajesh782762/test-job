@@ -12,4 +12,4 @@ words = sc.parallelize (
 )
 words_map = words.map(lambda x: (x, 1))
 mapping = words_map.collect()
-print "Key value pair -> %s" % (mapping)
+print (mapping)
