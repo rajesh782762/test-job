@@ -1,4 +1,4 @@
-from pyspark import SparkSession
+from pyspark.sql import SparkSession
 sc = SparkSession.builder.getOrCreate().sparkContext
 words = sc.parallelize (
    ["scala", 
