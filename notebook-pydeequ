@@ -1,0 +1,12 @@
+from pydeequ_module.main import process_deequ
+import sys
+import logging
+
+if __name__=="__main__":
+    logging.info("Inside Main Function")
+    mount_path = dbutils.widgets.get("mount_path") #"iignext/data-assertion" 
+    dataset=dbutils.widgets.get("dataset")  #pgsqlYamlGen
+    batch_id=dbutils.widgets.get("batch_id")
+    file_path=mount_path+"/"+dataset+"/"+"assert.yml" 
+    process_deequ(file_path,batch_id)
+    logging.info("Job Completed")
